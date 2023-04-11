@@ -1,0 +1,129 @@
+@import url('https://kraska-raptor.ru/files/products/ral-7000-seraya-belka.340x340.webp?96bc9961089b86fdf10c149f44efe200');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #0c1022;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: rgba(0, 0,0, .75);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-inline: 32px;
+}
+.container::before{
+    content: "";
+    height: 410px;
+    width: 410px;
+    position: absolute;
+    background: conic-gradient(
+        transparent,transparent,transparent,#d400d4
+        );
+    animation: animate 3s linear infinite;
+    animation-delay: -2s;
+}
+.container::after{
+    content: "";
+    height: 410px;
+    width: 410px;
+    position: absolute;
+    background: conic-gradient(
+        transparent,transparent,transparent,#00cfff
+        );
+    animation: animate 3s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.image{
+    position: absolute;
+    inset: 5px;
+    background-color: #0c1022;
+    z-index: 1;
+    border-radius: 16px;
+}
+.form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+.form-box .form h2{
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+}
+.form .input-box{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+input:focus ~ label
+input:valid ~ label{
+    top: -5px;
+}
+.input-box label{
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transform: .3s;
+}
+.group{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.group a{
+    position: relative;
+    top:  -15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+button{
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+button:focus{
+    color: #fff;
+    background-color: #0c1022;
+    border: 2px solid #fff;
+}
